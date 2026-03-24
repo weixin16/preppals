@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PrepPals - CSCA Preparation</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="shortcut icon" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              navy: {
+                950: '#0B1B45',
+                900: '#122A6A',
+                800: '#183888',
+                700: '#2A235C',
+                300: '#4A6FBF',
+                100: '#E6EBFF',
+                50: '#F0F4FF',
+              },
+              coral: {
+                600: '#FF5252',
+                500: '#FF6B6B',
+                400: '#FF8585',
+              },
+              cream: {
+                20: '#FFFBF7',
+                50: '#FFF8F1',
+                100: '#FBF3EA',
+                200: '#F2DFC9',
+                500: '#F9C784',
+              },
+              primary: '#183888',
+              accent: '#FF6B6B',
+              bg: '#F6F8FF',
+              gold: '#FDE1C3',
+              gold1: '#F9C784',
+              brown: '#A67C52',
+              surface: '#FFFFFF',
+              text: '#0B1B45',
+              muted: '#64748B',
+              border: 'rgba(16, 32, 80, 0.10)',
+            },
+            boxShadow: {
+              soft: '0 18px 50px -10px rgba(10, 22, 60, 0.08)',
+              card: '0 4px 20px -2px rgba(10, 22, 60, 0.05)',
+              glow: '0 0 30px rgba(24, 56, 136, 0.4)',
+              'glow-coral': '0 10px 30px -5px rgba(255, 107, 107, 0.4)',
+            },
+            backgroundImage: {
+              'hero-gradient': 'linear-gradient(180deg, #183888 0%, #122A6A 45%, #0B1B45 100%)',
+              'cream-hero': 'linear-gradient(180deg, #F2DFC9 0%, #FBF3EA 100%)',
+              'coral-gradient': 'linear-gradient(180deg, #FF7A7A 0%, #FF5C5C 100%)',
+              'navy-card': 'linear-gradient(145deg, #122A6A 0%, #0B1B45 100%)',
+            },
+            borderRadius: {
+              '3xl': '1.5rem',
+              '4xl': '2rem',
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
