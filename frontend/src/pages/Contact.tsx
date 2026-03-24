@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useState, useEffect } from "react";
 import { useParams, useSearchParams } from "react-router-dom";
 import {
   Mail,
@@ -22,6 +22,10 @@ const Contact: React.FC = () => {
   const page = getContactPageContent(validLang);
   const FORM_URL = import.meta.env.VITE_CONTACT_FORM_URL as string | undefined;
   const [searchParams] = useSearchParams();
+
+  useEffect(() => {
+    document.title = page.metaTitle;
+  }, [validLang]);
 
   const initialTimeline = useMemo(() => {
     const value = searchParams.get("timeline");

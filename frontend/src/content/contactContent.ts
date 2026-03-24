@@ -1,14 +1,16 @@
 import { Language } from "../types";
+import { getWhatsAppHref } from "../utils/whatsapp";
 
 export const getContactPageContent = (lang: Language) =>
   ({
     en: {
+      metaTitle: "Contact Us - PrepPals",
       channels: [
         {
           key: "whatsapp",
           title: "WhatsApp",
           subtitle: "Fastest way to reach us",
-          href: "https://chat.whatsapp.com/IhRFCNSJhhTBg9ZjdHsxrq?mode=wwc",
+          href: getWhatsAppHref("general", "en"),
           tone: "whatsapp",
         },
         {
@@ -42,12 +44,13 @@ export const getContactPageContent = (lang: Language) =>
     },
 
     zh: {
+      metaTitle: "联系我们 - PrepPals",
       channels: [
         {
           key: "whatsapp",
           title: "WhatsApp",
           subtitle: "最快联系到我们的方式",
-          href: "https://chat.whatsapp.com/IhRFCNSJhhTBg9ZjdHsxrq?mode=wwc",
+          href: getWhatsAppHref("general", "zh"),
           tone: "whatsapp",
         },
         {

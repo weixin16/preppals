@@ -43,6 +43,7 @@ type CompareRow = {
 };
 
 export type TutoringPageContent = {
+  metaTitle:string;
   hero: {
     breadcrumb: string;
     title1: string;
@@ -108,6 +109,7 @@ export const getTutoringPageContent = (lang: Language): TutoringPageContent => {
 
   return isZh
     ? {
+      metaTitle:"CSCA 补习班- PrepPals",
         hero: {
           breadcrumb: "备考补习班",
           title1: "PrepPals CSCA",
@@ -284,6 +286,7 @@ export const getTutoringPageContent = (lang: Language): TutoringPageContent => {
         },
       }
     : {
+      metaTitle:"CSCA Tutoring- PrepPals",
         hero: {
           breadcrumb: "Tutoring",
           title1: "PrepPals CSCA",

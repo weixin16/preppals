@@ -23,8 +23,7 @@ const TutoringOverview: React.FC = () => {
   const page = getTutoringPageContent(validLang);
 
   useEffect(() => {
-    document.title = "Tutoring - PrepPals";
-    window.scrollTo(0, 0);
+    document.title = page.metaTitle
   }, []);
 
   const getOfferIcon = (key: "stem" | "chinese" | "oneOnOne") => {

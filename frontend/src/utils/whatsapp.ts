@@ -5,6 +5,7 @@ export type WhatsAppCtaKey =
   | "general";
 
 const WHATSAPP_PHONE = "8618813052817";
+const WHATSAPP_GROUP_LINK = "https://chat.whatsapp.com/IhRFCNSJhhTBg9ZjdHsxrq";
 
 const messages = {
   en: {
@@ -15,7 +16,7 @@ const messages = {
     oneToOne:
       "Hi PrepPals! I am interested in your CSCA One-to-One Tutoring. Could you share the available subjects, fees, and booking details with me?",
     general:
-      "Hi PrepPals! I am interested in your CSCA tutoring program. Could you share more details with me?",
+      "Hi PrepPals! I am interested in your CSCA prep support. Could you recommend the most suitable next step based on my exam timeline and subjects?",
   },
   zh: {
     stemClasses:
@@ -25,7 +26,7 @@ const messages = {
     oneToOne:
       "Hi PrepPals! 我想咨询你们的 CSCA 一对一私教补习。可以发我科目安排、报名费用和预约方式吗？",
     general:
-      "Hi PrepPals! 我想咨询你们的 CSCA 补习班。可以发我更多详情吗？",
+      "Hi PrepPals! 我想咨询你们的 CSCA 备考支持。可以根据我的考试时间线和科目情况，给我一个更适合的下一步建议吗？",
   },
 } as const;
 
@@ -38,3 +39,5 @@ export const getWhatsAppHref = (
   key: WhatsAppCtaKey,
   lang: "en" | "zh" = "en"
 ) => buildWhatsAppLink(messages[lang][key]);
+
+export const getWhatsAppGroupHref = () => WHATSAPP_GROUP_LINK;

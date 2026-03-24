@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import {
   ArrowRight,
@@ -17,41 +17,22 @@ import Section from "../components/Section";
 import HeroCurve from "../components/HeroCurve";
 import { HERO_STYLES } from "../config/heroStyles";
 import { getHomeContent} from "../content/homeContent";
+import { getWhatsAppHref } from "../utils/whatsapp";
 
 type Lang = "en" | "zh";
 
 const Home: React.FC = () => {
   const { lang = "en" } = useParams<{ lang: string }>();
   const validLang: Lang = lang === "zh" ? "zh" : "en";
-  const [openFaq, setOpenFaq] = useState<number | null>(0);
 
-  const WHATSAPP_LINK =
-    validLang === "zh"
-      ? "https://api.whatsapp.com/send/?phone=8618813052817&text=Hi%20PrepPals!%20%E6%88%91%E6%83%B3%E5%92%A8%E8%AF%A2%E4%BD%A0%E4%BB%AC%E7%9A%84%20CSCA%20%E5%A4%87%E8%80%83%E6%94%AF%E6%8C%81%E3%80%82%E5%8F%AF%E4%BB%A5%E6%A0%B9%E6%8D%AE%E6%88%91%E7%9A%84%E8%80%83%E8%AF%95%E6%97%B6%E9%97%B4%E7%BA%BF%E5%92%8C%E7%A7%91%E7%9B%AE%E6%83%85%E5%86%B5%EF%BC%8C%E7%BB%99%E6%88%91%E4%B8%80%E4%B8%AA%E6%9B%B4%E9%80%82%E5%90%88%E7%9A%84%E5%BB%BA%E8%AE%AE%E5%90%97%EF%BC%9F&type=phone_number&app_absent=0"
-      : "https://api.whatsapp.com/send/?phone=8618813052817&text=Hi%20PrepPals!%20I%20am%20interested%20in%20your%20CSCA%20prep%20support.%20Could%20you%20suggest%20the%20most%20suitable%20next%20step%20based%20on%20my%20subjects%20and%20exam%20timeline%3F&type=phone_number&app_absent=0";
-
+  const WHATSAPP_LINK = getWhatsAppHref("general", validLang);
   const GROUP_LINK = "https://chat.whatsapp.com/IhRFCNSJhhTBg9ZjdHsxrq";
   const INSTAGRAM_LINK = "https://www.instagram.com/csca_preppals/";
 
   const content = getHomeContent(validLang);
-
-  const handleFaqToggle = (idx: number) => {
-    setOpenFaq(openFaq === idx ? null : idx);
-  };
-
-  const clampPercent = (value: number) => `${Math.max(value, 2)}%`;
-
-  const renderProofImage = (src: string, alt: string) => (
-    <img
-      src={src}
-      alt={alt}
-      className="mt-6 w-full rounded-2xl border border-gray-100 shadow-sm object-cover"
-      onError={(e) => {
-        (e.currentTarget as HTMLImageElement).style.display = "none";
-      }}
-      
-    />
-  );
+  useEffect(() => {
+  document.title = content.metaTitle;
+}, [validLang]);
 
   return (
     <div className="overflow-x-hidden bg-bg">

@@ -8,7 +8,7 @@ import { Language } from "../types";
 import { getTutoringClassContent } from "../content/tutoringDetailContent";
 import { getWhatsAppHref } from "../utils/whatsapp";
 import { getHomeContent } from "../content/homeContent";
-import { Sparkles, CheckCircle2, BarChart3, Users } from "lucide-react";
+import { Sparkles, CheckCircle2, BarChart3, Users, MessageCircle } from "lucide-react";
 
 const TutoringClass: React.FC = () => {
   const { lang = "en", type = "stem-classes" } = useParams<{
@@ -547,12 +547,15 @@ const INSTAGRAM_LINK = "https://www.instagram.com/csca_preppals/";
                 </p>
 
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
-                  <Link
-                    to={page.finalCta.primaryHref}
-                    className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-coral-500 text-white font-bold hover:bg-coral-600 transition-all"
+                  <a
+                    href={getWhatsAppHref(page.detailsWhatsappKey, validLang)}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-coral-500 text-white font-bold hover:bg-coral-600 transition-all"
                   >
+                    <MessageCircle size={18} />
                     {page.finalCta.primaryLabel}
-                  </Link>
+                  </a>
 
                   <Link
                     to={page.finalCta.secondaryHref}

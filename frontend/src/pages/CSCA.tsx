@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import {
   ArrowRight,
@@ -24,6 +24,7 @@ import {
   type TrackKey,
 } from "../content/cscaContent";
 import { HERO_STYLES } from "../config/heroStyles";
+import { getWhatsAppHref } from "../utils/whatsapp";
 
 const SUBJECT_META: Record<
   SubjectKey,
@@ -72,6 +73,10 @@ const CSCA: React.FC = () => {
   const { lang = "en" } = useParams<{ lang: string }>();
   const validLang: Lang = lang === "zh" ? "zh" : "en";
   const content = getCSCAContent(validLang);
+
+  useEffect(() => {
+    document.title = content.metaTitle;
+  }, [validLang]);
 
   const [program, setProgram] = useState<ProgramKey>("english-taught");
   const [track, setTrack] = useState<TrackKey>("stem");
@@ -594,13 +599,15 @@ const CSCA: React.FC = () => {
                 <div className="text-[11px] font-bold uppercase tracking-[0.18em] text-gold1 mb-3">{content.routes.guided.eyebrow}</div>
                 <h3 className="text-2xl font-bold mb-4">{content.routes.guided.title}</h3>
                 <p className="text-blue-50/85 leading-relaxed mb-8">{content.routes.guided.desc}</p>
-                <Link
-                  to={`/${validLang}${content.routes.guided.link}`}
+                <a
+                  href={getWhatsAppHref("general", validLang)}
+                  target="_blank"
+                  rel="noreferrer"
                   className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-gold1 text-navy-950 font-bold hover:bg-gold transition-all"
                 >
                   {content.routes.guided.cta}
                   <ArrowRight size={16} />
-                </Link>
+                </a>
               </div>
             </div>
           </div>

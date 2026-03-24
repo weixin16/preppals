@@ -19,12 +19,34 @@ import BlogList from "./pages/BlogList";
 import BlogPost from "./pages/BlogPost";
 import Contact from "./pages/Contact";
 
-// Scroll to top wrapper
 const ScrollToTop = () => {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
+
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    if (hash) {
+      const id = hash.replace("#", "");
+
+      const scrollToHash = () => {
+        const el = document.getElementById(id);
+        if (!el) return;
+
+        const navbarOffset = 110; // 你的 fixed navbar 预留一点空间
+        const y = el.getBoundingClientRect().top + window.scrollY - navbarOffset;
+
+        window.scrollTo({
+          top: y,
+          behavior: "smooth",
+        });
+      };
+
+      // 等页面内容先渲染出来
+      setTimeout(scrollToHash, 0);
+      return;
+    }
+
+    window.scrollTo({ top: 0, behavior: "auto" });
+  }, [pathname, hash]);
+
   return null;
 };
 

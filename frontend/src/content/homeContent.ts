@@ -3,6 +3,7 @@ import { Language } from "../types";
 
 export const getHomeContent = (validLang: Language) => ({
     en: {
+      metaTitle: "Home - PrepPals",
       heroPill: "Independent CSCA prep support for international students",
       heroTitle1: "PrepPals, ",
       heroTitle2: "Your CSCA Study Partner.",
@@ -286,6 +287,7 @@ export const getHomeContent = (validLang: Language) => ({
     },
 
     zh: {
+      metaTitle:"首页 - PrepPals",
       heroPill: "面向国际学生的独立 CSCA 备考帮助",
       heroTitle1: "PrepPals",
       heroTitle2: "你的 CSCA 备考伙伴。",

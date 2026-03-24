@@ -18,6 +18,7 @@ export type TimelineAction = {
 
 const cscaContent = {
   en: {
+    metaTitle: "CSCA Guide - PrepPals",
     hero: {
       pill: "CSCA Guide",
       title: "CSCA — China Scholastic Competency Assessment",
@@ -306,6 +307,7 @@ const cscaContent = {
   },
 
   zh: {
+    metaTitle: "CSCA指南 - PrepPals",
     hero: {
       pill: "CSCA 指南",
       title: "CSCA——来华留学本科入学学业水平测试",
