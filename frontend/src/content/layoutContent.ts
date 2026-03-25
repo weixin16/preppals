@@ -66,7 +66,7 @@ export const getLayoutPageContent = (lang: Language) =>
           ],
         },
         {
-          title: "Preppals 学习资源",
+          title: "PrepPals 学习资源",
           links: [
             { label: "资源概览", path: `/${lang}/resources` },
             { label: "数学", path: `/${lang}/resources/math` },

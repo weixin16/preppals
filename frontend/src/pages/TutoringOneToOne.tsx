@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import {
   ArrowDownRight,
   BookOpenCheck,
@@ -211,6 +211,47 @@ const TutoringOneOnOne: React.FC = () => {
                 <MessageCircle className="h-4 w-4" />
                 {page.ctaLabel}
               </a>
+            </div>
+          </div>
+        </Section>
+      </div>
+
+      {/* FINAL CTA */}
+      <div className="bg-white">
+        <Section className="pt-0">
+          <div className="max-w-6xl mx-auto">
+            <div className="relative overflow-hidden rounded-[2.5rem] bg-navy-950 px-8 py-12 md:px-14 md:py-16 text-center">
+              <div className="absolute top-[-30%] left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-blue-400/10 rounded-full blur-[120px] pointer-events-none" />
+              <div className="absolute bottom-[-20%] right-[-10%] w-[340px] h-[340px] bg-coral-400/10 rounded-full blur-[100px] pointer-events-none" />
+
+              <div className="relative z-10 max-w-3xl mx-auto">
+                <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-5 leading-tight">
+                  {page.finalCtaTitle}
+                </h2>
+
+                <p className="text-blue-100/80 text-lg leading-relaxed mb-10">
+                  {page.finalCtaSubtitle}
+                </p>
+
+                <div className="flex flex-col sm:flex-row justify-center gap-4">
+
+                  <Link
+                    to={page.finalSecondaryHref}
+                    className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white/10 border border-white/15 text-white font-bold hover:bg-white/15 transition-all"
+                  >
+                    {page.finalSecondaryLabel}
+                  </Link>
+                  <a
+                    href={page.ctaHref}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-coral-500 text-white font-bold hover:bg-coral-600 transition-all"
+                  >
+                    <MessageCircle size={18} />
+                    {page.ctaLabel}
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </Section>

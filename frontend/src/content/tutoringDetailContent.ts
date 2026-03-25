@@ -107,6 +107,11 @@ type OneOnOneContent = {
 
   ctaLabel: string;
   ctaHref: string;
+
+  finalCtaTitle: string;
+  finalCtaSubtitle: string;
+  finalSecondaryLabel: string;
+  finalSecondaryHref: string;
 };
 
 const isChineseTrack = (type: string) => type === "chinese-classes";
@@ -171,8 +176,8 @@ export const getTutoringClassContent = (
               "告诉我们你的科目方向、基础情况和考试时间线，我们会帮你判断更适合哪一种班型。",
             primaryLabel: "获取课程建议",
             primaryHref: `/${lang}/contact?intent=chinese-classes`,
-            secondaryLabel: "返回补习班概览",
-            secondaryHref: `/${lang}/tutoring`,
+            secondaryLabel: "联系我们",
+            secondaryHref: `/${lang}/contact?intent=chinese-classes`,
           },
         }
       : {
@@ -190,8 +195,8 @@ export const getTutoringClassContent = (
           detailsWhatsappKey: "stemClasses",
           detailRows: [
             { label: "班级容量", value: "10–15 人" },
-            { label: "总课时", value: "24 小时" },
-            { label: "上课次数", value: "12 次 × 2 小时" },
+            { label: "总课时", value: "28 小时" },
+            { label: "上课次数", value: "14 次 × 2 小时" },
             { label: "科目方向", value: "数学 / 物理 / 化学" },
             {
               label: "课程重点",
@@ -249,8 +254,8 @@ export const getTutoringClassContent = (
               "告诉我们你的科目、当前基础和考试时间线，我们会帮你判断更适合系统学习班还是一对一私教补习。",
             primaryLabel: "咨询理科系统学习班",
             primaryHref: `/${lang}/contact?intent=stem-classes`,
-            secondaryLabel: "返回补习班概览",
-            secondaryHref: `/${lang}/tutoring`,
+            secondaryLabel: "联系我们",
+            secondaryHref: `/${lang}/contact?intent=stem-classes`,
           },
         };
   }
@@ -312,8 +317,8 @@ export const getTutoringClassContent = (
             "Tell us your subject direction, current level, and exam timeline, and we can suggest the most suitable class path.",
           primaryLabel: "Get Class Advice",
           primaryHref: `/${lang}/contact?intent=chinese-classes`,
-          secondaryLabel: "Back to Tutoring Overview",
-          secondaryHref: `/${lang}/tutoring`,
+          secondaryLabel: "Contact Us",
+          secondaryHref: `/${lang}/contact?intent=chinese-classes`,
         },
       }
     : {
@@ -331,8 +336,8 @@ export const getTutoringClassContent = (
         detailsWhatsappKey: "stemClasses",
         detailRows: [
           { label: "Class Size", value: "10–15 Students" },
-          { label: "Total Duration", value: "24 Hours" },
-          { label: "Sessions", value: "12 sessions × 2 hours" },
+          { label: "Total Duration", value: "28 Hours" },
+          { label: "Sessions", value: "14 sessions × 2 hours" },
           { label: "Subjects", value: "Mathematics / Physics / Chemistry" },
           {
             label: "Focus",
@@ -392,8 +397,8 @@ export const getTutoringClassContent = (
             "Tell us your subject, current level, and exam timeline, and we can suggest whether a systematic class or 1-on-1 tutoring is the better fit.",
           primaryLabel: "Ask About STEM Classes",
           primaryHref: `/${lang}/contact?intent=stem-classes`,
-          secondaryLabel: "Back to Tutoring Overview",
-          secondaryHref: `/${lang}/tutoring`,
+          secondaryLabel: "Contact Us",
+          secondaryHref: `/${lang}/contact?intent=stem-classes`,
         },
       };
 };
@@ -473,6 +478,11 @@ export const getTutoringOneOnOneContent = (
       ctaLabel: "咨询一对一私教补习",
       ctaHref:
         "https://api.whatsapp.com/send/?phone=8618813052817&text=Hi%20PrepPals!%20%E6%88%91%E6%83%B3%E5%92%A8%E8%AF%A2%E4%BD%A0%E4%BB%AC%E7%9A%84%20CSCA%20%E4%B8%80%E5%AF%B9%E4%B8%80%E7%A7%81%E6%95%99%E8%A1%A5%E4%B9%A0%E3%80%82%E5%8F%AF%E4%BB%A5%E5%8F%91%E6%88%91%E7%A7%91%E7%9B%AE%E5%AE%89%E6%8E%92%E3%80%81%E6%8A%A5%E5%90%8D%E8%B4%B9%E7%94%A8%E5%92%8C%E9%A2%84%E7%BA%A6%E6%96%B9%E5%BC%8F%E5%90%97%EF%BC%9F&type=phone_number&app_absent=0",
+      finalCtaTitle: "想先看看一对一私教补习是否适合你？",
+      finalCtaSubtitle:
+      "告诉我们你的科目、当前基础和考试时间线，我们会帮你判断最适合的辅导方向。",
+      finalSecondaryLabel: "联系我们",
+      finalSecondaryHref: `/${lang}/contact`,
     };
   }
 
@@ -547,5 +557,11 @@ export const getTutoringOneOnOneContent = (
     ctaLabel: "Start One-to-One Consultation",
     ctaHref:
       "https://api.whatsapp.com/send/?phone=8618813052817&text=Hi%20PrepPals!%20I%20am%20interested%20in%20your%20CSCA%20One-to-One%20Tutoring.%20Could%20you%20share%20the%20available%20subjects%2C%20fees%2C%20and%20booking%20details%20with%20me%3F&type=phone_number&app_absent=0",
+    
+    finalCtaTitle: "Want to see whether one-to-one tutoring is the right fit for you?",
+    finalCtaSubtitle:
+      "Tell us your subject, current level, and exam timeline, and we can suggest the most suitable next step.",
+    finalSecondaryLabel: "Contact Us",
+    finalSecondaryHref: `/${lang}/contact`,
   };
 };

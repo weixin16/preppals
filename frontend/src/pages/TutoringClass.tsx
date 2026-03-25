@@ -19,7 +19,7 @@ const TutoringClass: React.FC = () => {
   const validLang = lang === "en" || lang === "zh" ? (lang as Language) : "en";
   const page = getTutoringClassContent(validLang, type);
   const homeContent = getHomeContent(validLang);
-const INSTAGRAM_LINK = "https://www.instagram.com/csca_preppals/";
+  const INSTAGRAM_LINK = "https://www.instagram.com/csca_preppals/";
 
   useEffect(() => {
     document.title = `${page.breadcrumbCurrent} - PrepPals`;
@@ -115,51 +115,7 @@ const INSTAGRAM_LINK = "https://www.instagram.com/csca_preppals/";
         <HeroCurve fillColor={HERO_STYLES.tutoring.curveFill} />
       </div>
 
-      <div className="bg-white py-16 md:py-24" id="course-structure">
-        <Section noPadding>
-          <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-10">
-              <h2 className="text-3xl md:text-4xl font-extrabold text-navy-950 mb-4">
-                {page.detailsTitle}
-              </h2>
-              <p className="text-navy-900/65 text-lg max-w-2xl mx-auto leading-relaxed">
-                {page.detailsIntro}
-              </p>
-            </div>
-
-            <div className="overflow-hidden rounded-[2rem] bg-white shadow-[0_12px_34px_rgba(12,24,60,0.08)] ring-1 ring-[rgba(16,32,80,0.08)]">
-              <div className="grid grid-cols-[0.9fr_1.1fr] bg-navy-950 text-white px-6 md:px-8 py-4 font-bold uppercase tracking-[0.18em]">
-                <div>{validLang === "zh" ? "项目" : "Item"}</div>
-                <div>{validLang === "zh" ? "内容" : "Details"}</div>
-              </div>
-
-              {page.detailRows.map((row, idx) => (
-                <div
-                  key={idx}
-                  className={`grid grid-cols-1 md:grid-cols-[0.9fr_1.1fr] gap-2 px-6 md:px-8 py-5 ${
-                    idx % 2 === 0 ? "bg-white" : "bg-[#FCFBF8]"
-                  }`}
-                >
-                  <div className="font-bold text-navy-950">{row.label}</div>
-                  <div className="text-navy-900/75 font-medium leading-relaxed">{row.value}</div>
-                </div>
-              ))}
-            </div>
-            <div className="mt-8 text-center">
-              <a
-                href={getWhatsAppHref(page.detailsWhatsappKey, validLang)}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center justify-center px-7 py-4 rounded-full bg-coral-500 text-white font-bold shadow-[0_14px_34px_rgba(245,124,92,0.22)] hover:bg-coral-600 hover:-translate-y-0.5 transition-all"
-              >
-                {page.detailsCtaLabel}
-              </a>
-            </div>
-          </div>
-        </Section>
-      </div>
-
-      <div className="bg-cream-20 py-16 md:py-24">
+      <div className="bg-white py-16 md:py-24">
         <Section noPadding>
           <div className="max-w-6xl mx-auto grid lg:grid-cols-[1.12fr_0.88fr] gap-12 items-start">
             <div>
@@ -213,6 +169,50 @@ const INSTAGRAM_LINK = "https://www.instagram.com/csca_preppals/";
                   ))}
                 </div>
               </div>
+            </div>
+          </div>
+        </Section>
+      </div>
+
+      <div id="course-structure" className="bg-cream-20 py-16 md:py-24" >
+        <Section noPadding>
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl md:text-4xl font-extrabold text-navy-950 mb-4">
+                {page.detailsTitle}
+              </h2>
+              <p className="text-navy-900/65 text-lg max-w-2xl mx-auto leading-relaxed">
+                {page.detailsIntro}
+              </p>
+            </div>
+
+            <div className="overflow-hidden rounded-[2rem] bg-white shadow-[0_12px_34px_rgba(12,24,60,0.08)] ring-1 ring-[rgba(16,32,80,0.08)]">
+              <div className="grid grid-cols-[0.9fr_1.1fr] bg-navy-950 text-white px-6 md:px-8 py-4 font-bold uppercase tracking-[0.18em]">
+                <div>{validLang === "zh" ? "项目" : "Item"}</div>
+                <div>{validLang === "zh" ? "内容" : "Details"}</div>
+              </div>
+
+              {page.detailRows.map((row, idx) => (
+                <div
+                  key={idx}
+                  className={`grid grid-cols-1 md:grid-cols-[0.9fr_1.1fr] gap-2 px-6 md:px-8 py-5 ${
+                    idx % 2 === 0 ? "bg-white" : "bg-[#FCFBF8]"
+                  }`}
+                >
+                  <div className="font-bold text-navy-950">{row.label}</div>
+                  <div className="text-navy-900/75 font-medium leading-relaxed">{row.value}</div>
+                </div>
+              ))}
+            </div>
+            <div className="mt-8 text-center">
+              <a
+                href={getWhatsAppHref(page.detailsWhatsappKey, validLang)}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center px-7 py-4 rounded-full bg-coral-500 text-white font-bold shadow-[0_14px_34px_rgba(245,124,92,0.22)] hover:bg-coral-600 hover:-translate-y-0.5 transition-all"
+              >
+                {page.detailsCtaLabel}
+              </a>
             </div>
           </div>
         </Section>
@@ -341,7 +341,7 @@ const INSTAGRAM_LINK = "https://www.instagram.com/csca_preppals/";
             </div>
           </Section>
 
-          <div className="bg-bg py-16 md:py-24 border-t border-gray-200/50">
+          <div className="bg-cream-20 py-16 md:py-24 border-t border-gray-200/50">
             <Section noPadding>
               <div className="text-center mb-14">
                 <h2 className="text-3xl md:text-4xl font-extrabold text-navy-950 mb-4 px-4">
@@ -469,7 +469,7 @@ const INSTAGRAM_LINK = "https://www.instagram.com/csca_preppals/";
 
                 {/* Right Summary Cards */}
                 <div className="flex flex-col gap-4 lg:pt-2">
-                  <div className="rounded-[1.5rem] p-5 md:p-6 bg-[#FAF8F5] border border-[#EBE5DE] shadow-soft">
+                  <div className="rounded-[1.5rem] p-5 md:p-6 bg-bg border border-navy-600/15 shadow-soft">
                     <div className="w-9 h-9 bg-white text-coral-500 rounded-xl shadow-sm flex items-center justify-center mb-4">
                       <Users size={18} />
                     </div>
@@ -530,7 +530,7 @@ const INSTAGRAM_LINK = "https://www.instagram.com/csca_preppals/";
 
     
 
-      <div className="bg-white mb-32">
+      <div className="bg-white py-16 md:py-24">
         <Section noPadding>
           <div className="max-w-5xl mx-auto">
             <div className="relative overflow-hidden rounded-[2.5rem] bg-navy-950 px-8 py-12 md:px-14 md:py-16 text-center">
@@ -547,6 +547,13 @@ const INSTAGRAM_LINK = "https://www.instagram.com/csca_preppals/";
                 </p>
 
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
+                  <Link
+                    to={page.finalCta.secondaryHref}
+                    className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-white/10 border border-white/15 text-white font-bold hover:bg-white/15 transition-all"
+                  >
+                    {page.finalCta.secondaryLabel}
+                  </Link>
+
                   <a
                     href={getWhatsAppHref(page.detailsWhatsappKey, validLang)}
                     target="_blank"
@@ -556,13 +563,6 @@ const INSTAGRAM_LINK = "https://www.instagram.com/csca_preppals/";
                     <MessageCircle size={18} />
                     {page.finalCta.primaryLabel}
                   </a>
-
-                  <Link
-                    to={page.finalCta.secondaryHref}
-                    className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-white/10 border border-white/15 text-white font-bold hover:bg-white/15 transition-all"
-                  >
-                    {page.finalCta.secondaryLabel}
-                  </Link>
                 </div>
               </div>
             </div>

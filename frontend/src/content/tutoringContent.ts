@@ -261,7 +261,7 @@ export const getTutoringPageContent = (lang: Language): TutoringPageContent => {
               ],
             },
             {
-              studentType: "时间更紧迫 / 我需要更个性化支持",
+              studentType: "时间更紧迫、需要量身定制的备考计划",
               needs: "我希望完全围绕自己的问题、时间线和目标来安排。",
               recommendedLinks: [
                 {
@@ -342,8 +342,8 @@ export const getTutoringPageContent = (lang: Language): TutoringPageContent => {
               subtitle: "Mathematics, Physics, Chemistry",
               meta: [
                 { label: "Class Size", value: "10–15 students" },
-                { label: "Hours", value: "24 hours" },
-                { label: "Sessions", value: "12 × 2 hours" },
+                { label: "Hours", value: "28 hours" },
+                { label: "Sessions", value: "14 × 2 hours" },
               ],
               ctaLabel: "View STEM Classes Details",
               href: `/${lang}/tutoring/stem-classes`,

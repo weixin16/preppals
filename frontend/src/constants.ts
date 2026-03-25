@@ -364,8 +364,8 @@ export const CONTENT: Record<Language, Content> = {
       tutoring: "补习班",
       tutoringDropdown: {
         overview: "概览",
-        stem: "理科 系统学习班",
-        chinese: "专业中文 系统学习班",
+        stem: "理科系统学习班",
+        chinese: "专业中文系统学习班",
         oneOnOne: "1 对 1 私教补习",
       },
       about: "关于我们",
