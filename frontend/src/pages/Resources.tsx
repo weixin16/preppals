@@ -135,7 +135,7 @@ const ResourcesOverview: React.FC = () => {
         <div className="pointer-events-none absolute -bottom-20 -left-20 w-80 h-80 bg-blue-100/50 rounded-full blur-3xl" />
       </div>
 
-      <div className="bg-white py-16 md:py-24 relative z-10 border-t border-navy-900/5">
+      <div className="bg-white py-16 md:py-24 relative z-10">
         <Section noPadding>
           <div className="max-w-6xl mx-auto">
             <div className="relative overflow-hidden rounded-[2rem] border border-navy-900/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.92)_0%,rgba(247,250,255,0.98)_100%)] p-8 md:p-12 shadow-[0_24px_60px_rgba(12,27,71,0.08)]">

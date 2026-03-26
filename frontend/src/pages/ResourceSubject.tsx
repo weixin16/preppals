@@ -123,7 +123,7 @@ const ResourceSubject: React.FC = () => {
         <div className="pointer-events-none absolute -bottom-12 -left-12 w-64 h-64 bg-blue-100/50 rounded-full blur-3xl" />
       </div>
 
-      <div className="bg-white py-16 md:py-24 relative z-10 border-t border-gray-100/60">
+      <div className="bg-white py-16 md:py-24 relative z-10">
         <Section noPadding>
           <div className="max-w-4xl mx-auto rounded-[2rem] bg-white border border-gray-100 shadow-soft p-8 md:p-12 text-center relative overflow-hidden">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(240,144,0,0.08),transparent_30%),radial-gradient(circle_at_bottom_left,rgba(16,32,128,0.08),transparent_35%)] pointer-events-none" />

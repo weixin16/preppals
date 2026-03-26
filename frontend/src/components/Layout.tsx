@@ -151,7 +151,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   // Logic for styling based on page type and scroll state
   let navClasses = "bg-white/95 backdrop-blur-md text-navy-950 shadow-sm py-4";
-  let logoBg = "bg-navy-900 text-white";
+  let logoBg = "text-white";
   let linkHover = "hover:text-coral-500";
   let menuIconColor = "text-navy-950";
 
@@ -165,7 +165,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     } else {
       // Light hero pages -> navy text
       navClasses = "bg-transparent text-navy-950 py-6";
-      logoBg = "bg-navy-900 text-white";
+      logoBg = "text-white";
       linkHover = "hover:text-coral-500";
       menuIconColor = "text-navy-950";
     }
@@ -332,10 +332,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <div className="mt-8 flex flex-col gap-4">
               <button
                 onClick={switchLanguage}
-                className="flex items-center justify-center gap-2 text-base font-semibold text-navy-600 py-3 bg-gray-50 rounded-xl"
+                className="flex items-center justify-center gap-2 text-base font-semibold text-navy-950 py-3 bg-gray-50 rounded-xl"
               >
-                <Globe size={18} />
-                Switch to {layoutCopy.languageMobile}
+                <Globe size={18}/>
+                {layoutCopy.languageMobile}
               </button>
               <Link
                 to={`/${validLang}/contact`}
@@ -367,7 +367,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 PrepPals
               </div>
               <p className="text-sm text-muted leading-relaxed">
-                {layoutCopy.brandDescription}
+                {layoutCopy.brandDescription1}
+                <br />
+                {layoutCopy.brandDescription2}
               </p>
             </div>
 

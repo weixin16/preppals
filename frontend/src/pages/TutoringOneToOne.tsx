@@ -37,7 +37,7 @@ const TutoringOneOnOne: React.FC = () => {
     <div className="font-sans bg-white text-navy-950 min-h-screen overflow-x-hidden">
       {/* HERO */}
       <div
-        className="relative pt-32 pb-30 md:pt-40 md:pb-36 overflow-hidden"
+        className="relative pt-28 pb-28 md:pt-40 md:pb-36 overflow-hidden"
         style={{
           background:
             "linear-gradient(135deg, #102A70 0%, #183E99 52%, #0D1F55 100%)",
@@ -50,7 +50,7 @@ const TutoringOneOnOne: React.FC = () => {
         <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
           <HeroBreadcrumb
             theme="dark"
-            className="mb-8"
+            className="mb-6 md:mb-8"
             items={[
               {
                 label: page.breadcrumbParent,
@@ -63,22 +63,22 @@ const TutoringOneOnOne: React.FC = () => {
             ]}
           />
 
-          <p className="text-sm md:text-base font-bold uppercase tracking-[0.22em] text-[#FDE1C3] mb-5">
+          <p className="text-xs sm:text-sm md:text-base font-bold uppercase tracking-[0.22em] text-[#FDE1C3] mb-4 md:mb-5">
             {page.categoryLine}
           </p>
 
-          <h1 className="text-[3.15rem] md:text-[5.3rem] lg:text-[5rem] font-extrabold mb-6 leading-[0.98] tracking-[-0.03em] text-white">
+          <h1 className="text-[2.75rem] sm:text-[3.15rem] md:text-[5.3rem] lg:text-[5rem] font-extrabold mb-5 md:mb-6 leading-[0.98] tracking-[-0.03em] text-white">
             {page.title}
           </h1>
 
-          <p className="text-lg md:text-xl text-blue-100/90 max-w-3xl mx-auto leading-relaxed font-medium">
+          <p className="text-[1.05rem] md:text-xl text-blue-100/90 max-w-3xl mx-auto leading-relaxed font-medium">
             {page.subtitle}
           </p>
 
-          <div className="pt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="pt-8 pb-2 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href={page.heroLinkHref}
-              className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#fcd2a8] text-navy-900 font-bold rounded-full hover:bg-[#FDE1C3] transition-colors shadow-md"
+              className="inline-flex w-full max-w-[280px] sm:w-auto justify-center items-center gap-2 px-7 py-3.5 bg-[#fcd2a8] text-navy-900 font-bold rounded-full hover:bg-[#FDE1C3] transition-colors shadow-md"
             >
               {page.heroLinkLabel}
               <ArrowDownRight size={18} />
@@ -91,7 +91,7 @@ const TutoringOneOnOne: React.FC = () => {
 
       {/* PAIN POINTS */}
       <div className="bg-white relative z-10">
-        <Section className="pt-10 md:pt-35">
+        <Section className="pt-10 md:pt-32">
           <div className="max-w-6xl mx-auto grid lg:grid-cols-[0.95fr_1.05fr] gap-12 items-start">
             <div>
               <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-50 text-primary text-xs font-bold uppercase tracking-[0.18em] mb-5">

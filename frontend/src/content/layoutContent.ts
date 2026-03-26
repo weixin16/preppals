@@ -3,8 +3,10 @@ import { Language } from "../types";
 export const getLayoutPageContent = (lang: Language) =>
   ({
     en: {
-      brandDescription:
-        "Empowering international students to prepare for CSCA with clearer direction, practical resources, and structured support.",
+      brandDescription1:
+        "Prepare with Pals, ",
+      brandDescription2:
+        "Power your Progress.",
       languageDesktop: "中文",
       languageMobile: "Switch to 中文",
       footerSections: [
@@ -53,8 +55,10 @@ export const getLayoutPageContent = (lang: Language) =>
     },
 
     zh: {
-      brandDescription:
-        "帮助国际学生用更清晰的方向、实用的资源和结构化支持来准备 CSCA。",
+      brandDescription1:
+        "Prepare with Pals, ",
+      brandDescription2:
+        "Power your Progress.",
       languageDesktop: "EN",
       languageMobile: "切换到 English",
       footerSections: [
